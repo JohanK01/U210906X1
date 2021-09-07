@@ -8,11 +8,11 @@ namespace Ex2
         {
             Console.WriteLine("Skriv en mening");
             string mening = Console.ReadLine();
-            string[] orden = mening.Split(' ');
+            string[] words = mening.Split(' ');
 
-            foreach (var word in mening)
+            foreach (var word in words)
             {
-                System.Console.WriteLine($"<{word}>");
+                System.Console.WriteLine($"{word}");
             }
         }
     }
