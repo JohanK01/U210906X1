@@ -6,7 +6,14 @@ namespace Ex2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Skriv en mening");
+            string mening = Console.ReadLine();
+            string[] orden = mening.Split(' ');
+
+            foreach (var word in mening)
+            {
+                System.Console.WriteLine($"<{word}>");
+            }
         }
     }
 }
