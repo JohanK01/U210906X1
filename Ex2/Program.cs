@@ -8,20 +8,28 @@ namespace Ex2
         {
             Console.WriteLine("Skriv en mening");
             string mening = Console.ReadLine();
-            string[] words = mening.Split(' ');
+            string[] wordsArr = mening.Split(' ');
+            int arrLength = wordsArr.Length;
 
-      
-            //skriver ut det största ordet
-            int length = 0;
-            for (int i = 1; i < words.Length; i++)
+
+
+            for (int i = 1; i < wordsArr.Length; i++)
             {
-                if (words[length].Length < words[i].Length)
+                string temp = wordsArr[i];
+                int inn = i - 1;
+                while (inn >= 0 && temp.Length < wordsArr[inn].Length)
                 {
-                    length = i;
+                    wordsArr[inn + 1] = wordsArr[inn];
+                    inn--;
                 }
+                wordsArr[inn + 1] = temp;
             }
-            Console.Write(words[length]);
-            
+
+            for (int i = 0; i < arrLength; i++)
+            {
+                Console.WriteLine(wordsArr[i]);
+            }
+            Console.ReadLine();
         }
     }
 }
