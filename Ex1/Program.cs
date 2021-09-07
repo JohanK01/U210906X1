@@ -8,31 +8,14 @@ namespace Ex1
         {
             Console.WriteLine("Skriv en mening");
             string mening = Console.ReadLine();
+            string[] words = mening.Split(' ');
 
-            
-            string[] orden = mening.Split(' ');  
-            
-            int ordmangd = 0;
-
-            for (int i = 0; i < mening.Length; i++)
+            Console.WriteLine(words.Length);
+            foreach (string word in words)
             {
-                if (mening[i] == ' ')
-                {
-                    ordmangd++;
-                }
-                else
-                {
-                    orden[ordmangd] += mening[i];
-                }
+                System.Console.WriteLine($"{word} {word.Length}");
             }
-            ordmangd++;
-            Console.WriteLine(ordmangd);
 
-            foreach (var word in orden)
-            {
-                System.Console.WriteLine($"{word}");
-            }
-            
 
 
 
