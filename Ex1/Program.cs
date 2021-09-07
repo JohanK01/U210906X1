@@ -9,7 +9,9 @@ namespace Ex1
             Console.WriteLine("Skriv en mening");
             string mening = Console.ReadLine();
 
-            string[] orden = new string [99999];
+            
+            string[] orden = mening.Split(' ');  
+            
             int ordmangd = 0;
 
             for (int i = 0; i < mening.Length; i++)
@@ -25,6 +27,13 @@ namespace Ex1
             }
             ordmangd++;
             Console.WriteLine(ordmangd);
+
+            foreach (var word in orden)
+            {
+                System.Console.WriteLine($"{word}");
+            }
+            
+
 
 
         }
