@@ -10,10 +10,18 @@ namespace Ex2
             string mening = Console.ReadLine();
             string[] words = mening.Split(' ');
 
-            foreach (var word in words)
+      
+            //skriver ut det största ordet
+            int length = 0;
+            for (int i = 1; i < words.Length; i++)
             {
-                System.Console.WriteLine($"{word}");
+                if (words[length].Length < words[i].Length)
+                {
+                    length = i;
+                }
             }
+            Console.Write(words[length]);
+            
         }
     }
 }
