@@ -11,25 +11,27 @@ namespace Ex6
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
 
-            string[] SiffrorMellan1_21 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"};
-            int sIndex = rnd.Next(SiffrorMellan1_21.Length);
-            Console.WriteLine(SiffrorMellan1_21[sIndex]);
+            Console.WriteLine("Gissa på ett tal mellan 1-21");
+            while (true)
+            {
 
-            //while (true)
-            //{
-            //    Console.WriteLine("Gissa på ett tal mellan 1-21");
-            //    string siffror = Console.ReadLine();
-                
-            //    if (siffror == "0")
-            //    {
-            //        break;
-            //    }
+                string siffror = Console.ReadLine();
 
+                Random rnd = new Random();
 
-            //}
-            //Console.WriteLine("Grattis!");
+                string[] SiffrorMellan1_21 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+                int sIndex = rnd.Next(SiffrorMellan1_21.Length);
+                Console.WriteLine("Rätt svar: " + SiffrorMellan1_21[sIndex]);
+
+                if (siffror == SiffrorMellan1_21[sIndex])
+                {
+                    break;
+                }
+                Console.WriteLine("Fortsätt gissa ;)");
+
+            }
+            Console.WriteLine("Grattis!");
 
         }
     }
