@@ -19,12 +19,13 @@ namespace Ex6
                 string siffror = Console.ReadLine();
 
                 Random rnd = new Random();
+                
+               // string[] SiffrorMellan1_21 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
+                int sIndex = rnd.Next(1, 22);
+                string str = Convert.ToString(sIndex);
+                Console.WriteLine("Rätt svar: " + sIndex);
 
-                string[] SiffrorMellan1_21 = { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" };
-                int sIndex = rnd.Next(SiffrorMellan1_21.Length);
-                Console.WriteLine("Rätt svar: " + SiffrorMellan1_21[sIndex]);
-
-                if (siffror == SiffrorMellan1_21[sIndex])
+                if (siffror == str )
                 {
                     break;
                 }
