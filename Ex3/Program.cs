@@ -6,7 +6,14 @@ namespace Ex3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Skriv en mening");
+            string mening = Console.ReadLine();
+            string[] orden = mening.Split(' ');
+
+            for (int i = 0; i < orden.Length; i++)
+            {
+
+            }
         }
     }
 }

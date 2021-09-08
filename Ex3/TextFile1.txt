@@ -1,0 +1,7 @@
+﻿Låt användaren mata in en mening.
+måste dela upp stringen för att kunna få ut alla ord
+
+Skriv ut varje unikt ord på en egen rad, och ange hur ofta ordet förekommer (ex "och (2)")
+jämföra hur många gånger ett ord upprepar sig
+
+Skriv ut varje unikt ord på en egen rad, sorterat efter hur ofta ordet förekommer
