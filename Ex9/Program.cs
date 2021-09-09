@@ -6,29 +6,32 @@ namespace Ex9
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Skriv in nummer");
-            Int16.Parse("100");
-            int[] tal = { 6, 7, 11, 4, 1, 2 };
-            foreach (int i in tal)
-            {
-                Console.Write(i+" ");
-            }
-            int temp;
+            Console.WriteLine("Skriv in hur många tal du vill ha");
+            int antal = Convert.ToInt32(Console.ReadLine());
 
-            for (int j = 0; j < tal.Length - 1; j++)
+            int[] sifferbok = new int[antal];
+            int temp;
+            for (int i = 0; i < antal; i++)
             {
-                for (int i = 0; i < tal.Length - 1; i++)
+                Console.Write("Skriv en siffra: ");
+                sifferbok[i] = Convert.ToInt32(Console.ReadLine());
+            }
+
+         
+            for (int j = 0; j < sifferbok.Length - 1; j++)
+            {
+                for (int i = 0; i < sifferbok.Length - 1; i++)
                 {
-                    if (tal[i] > tal[i + 1])
+                    if (sifferbok[i] > sifferbok[i + 1])
                     {
-                        temp = tal[i + 1];
-                        tal[i + 1] = tal[i];
-                        tal[i] = temp;
+                        temp = sifferbok[i + 1];
+                        sifferbok[i + 1] = sifferbok[i];
+                        sifferbok[i] = temp;
                     }
                 }
             }
             Console.WriteLine("färdig");
-            foreach (int p in tal)
+            foreach (int p in sifferbok)
             {
                 Console.Write(p + " ");
             }
